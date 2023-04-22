@@ -1,14 +1,220 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Page title</title>
-    <link rel="stylesheet" href="./sass/index.scss" />
-    <script type="module" src="./index.js"></script>
-  </head>
-  <body>
-    <!-- ❗️❗️❗️ Add partials like so for every page -->
-    <include src="./partials/example.html"></include>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=PT+Serif:wght@400;700&family=Roboto:wght@300;500;900&family=Yeseva+One&display=swap"
+    rel="stylesheet">
+
+
+  <title>Тест на определение IQ</title>
+  <link rel="stylesheet" href="./sass/index.scss" />
+  <script type="module" src="./index.js"></script>
+</head>
+
+<body>
+  <header class="header">
+
+    <div class="header__container">
+      <button type="button" class="header__menu-open" data-menu-open>
+        <svg width="24" height="16">
+          <use class="mob-menu__icon-menu" href="./images/symbol-defs.svg#menu"></use>
+        </svg>
+      </button>
+
+      <div class="header__subcontainer">
+        <img src="./images/header-icon.png" alt="Иконка мозг" class="header__icon">
+        <p class="header__title">Tест на определение IQ</p>
+      </div>
+    </div>
+
+    <div class="mob-menu is-hidden" data-menu>
+      <button type="button" class="mob-menu__btn-close" data-menu-close>
+        <svg width="28" height="28">
+          <use class="mob-menu__icon-close" href="./images/symbol-defs.svg#cross"></use>
+        </svg>
+      </button>
+
+      <nav class="navigation">
+        <ul class="navigation__list">
+          <li class="navigation__item"><a href="#hero" class="navigation__link">Главная</a> </li>
+          <li class="navigation__item"><a href="#about" class="navigation__link">Информация о тесте</a></li>
+          <li class="navigation__item"><a href="/" class="navigation__link">Пройти тест</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="main-content">
+      <div id="hero" class="hero">
+        <p class="hero__pretitle">Пройдите точный и быстрый</p>
+        <h1 class="hero__title">Тест на определение IQ</h1>
+
+        <button class="hero__button btn-start" type="button">Пройти тест</button>
+
+        <p class="hero__subtitle"><span class="hero__subtitle--bold">И получите рекомендации по развитию своего
+            интеллекта</span> <br> и улучшению финансового благосостояния и личной жизни
+        </p>
+
+        <div class="hero__details">
+          <button class="hero__button-up" type="button">
+            <svg width="7.27" height="7.27">
+              <use class="hero__icon-arrow" href="./images/symbol-defs.svg#arrow-up"></use>
+            </svg>
+          </button>
+          <p class="hero__details-text">Подробнее</p>
+        </div>
+      </div>
+
+      <div id="about" class="about">
+        <div class="about__quotes-up">
+          <svg width="23" height="23">
+            <use class="about__icon-quotes-up" href="./images/symbol-defs.svg#quotes-up"></use>
+          </svg>
+        </div>
+
+        <p class="about__text">Профессиональный IQ-тест позволяет не только определить коэффициент вашего интеллекта, но
+          и выработать список рекомендаций для повышения этого показателя.</p>
+
+        <div class="about__quotes-down">
+          <svg width="23" height="23">
+            <use class="about__icon-quotes-down" href="./images/symbol-defs.svg#quotes-down"></use>
+          </svg>
+        </div>
+      </div>
+
+      <div class="benefits">
+        <p class="benefits__text">Также по результатам теста <br> <span class="benefits__text--bold">вы получите</span>
+          подробные <span class="benefits__text--bold">советы</span> по
+          определению наиболее перспективной <span class="benefits__text--bold">для вашего типа</span>
+          <span class="benefits__text--strong">интеллекта</span> <span class="benefits__text--bold">сферы
+            деятельности</span>, которая принесет вам скорейший финансовый результат.
+        </p>
+        <img src="./images/benefits-brain.png" alt="Сферы деятельности мозга" class="benefits__image">
+        <button class="benefits__button btn-start" type="button">Пройти тест</button>
+      </div>
+
+      <div class="features">
+        <p class="features__passage-time">Прохождение теста займет у вас не более <span
+            class="features__passage-time--bold">12 минут</span> , а его результаты вы сможете <span
+            class="features__passage-time--bold">использовать всю жизнь.</span>
+        </p>
+
+        <div class="features__text-container">
+          <p class="features__text">Профессиональная интерпретация и детально <span
+              class="features__text--highlight">проработанные рекомендации</span>
+            позволят вам качественно <span class="features__text--highlight">изменить все аспекты своей жизни:</span>
+            от финансового до любовного.
+          </p>
+        </div>
+
+        <button class="features__button" type="button">Пройти тест</button>
+      </div>
+
+    </section>
+
+    <div class="test is-none">
+      <input type="range">
+
+      <ul class="iq-test">
+        <!-- <li>
+          <form>
+            <p>Ваш пол:</p>
+            <label>
+              <input type="radio" name="color" value="red" />
+              Мужчина
+            </label>
+            <label>
+              <input type="radio" name="color" value="white" />
+              Женщина
+            </label>
+          </form>
+        </li>
+
+        <li>
+          <form>
+            <p>Укажите ваш возраст:</p>
+            <label>
+              <input type="radio" name="color" value="red" />
+              До 18
+            </label>
+            <label>
+              <input type="radio" name="color" value="white" />
+              От 18 до 28
+            </label>
+            <label>
+              <input type="radio" name="color" value="white" />
+              от 29 до 35
+            </label>
+            <label>
+              <input type="radio" name="color" value="white" />
+              От 36
+            </label>
+          </form>
+        </li>
+
+        <li>
+          <form>
+            <p>Выберите лишнее:</p>
+            <label>
+              <input type="radio" name="color" value="red" />
+              Дом
+            </label>
+            <label>
+              <input type="radio" name="color" value="white" />
+              Шалаш
+            </label>
+            <label>
+              <input type="radio" name="color" value="white" />
+              Бунгало
+            </label>
+            <label>
+              <input type="radio" name="color" value="white" />
+              Скамейка
+            </label>
+            <label>
+              <input type="radio" name="color" value="white" />
+              Хижина
+            </label>
+          </form>
+        </li>
+
+        <li>Вопрос 3</li>
+
+        <li>Вопрос 3</li>
+
+        <li>Вопрос 3</li>
+
+        <li>Вопрос 3</li>
+
+        <li>Вопрос 3</li>
+
+        <li>Вопрос 3</li>
+
+        <li>Вопрос 3</li>
+
+        <li>Вопрос 3</li> -->
+
+      </ul>
+
+      <button type="button" class="next">Далее</button>
+    </div>
+
+
+  </main>
+
+  <footer class="footer">
+    <p>&#169 2019</p>
+  </footer>
+
+
+  <!-- ❗️❗️❗️ Add partials like so for every page -->
+  <!-- <include src="./partials/example.html"></include> -->
+</body>
+
 </html>

@@ -1,0 +1,33 @@
+.benefits {
+  padding: 38px 11px 40px 11px;
+  //   background-image: url('../images/benefits-brain.jpg'), #f3f3f2;
+  background-color: #f3f3f2;
+}
+
+.benefits__text {
+  margin-bottom: 28px;
+  font-family: 'PT Serif';
+  font-size: 16px;
+  line-height: calc(24 / 16);
+  color: #272727;
+}
+
+.benefits__text--bold {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.benefits__text--strong {
+  font-weight: 700;
+}
+
+.benefits__image {
+  margin: 0 auto;
+  width: 232px;
+  margin-bottom: 21px;
+}
+
+.benefits__button {
+  width: 200px;
+  height: 44px;
+}
