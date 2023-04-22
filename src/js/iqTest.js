@@ -1,9 +1,9 @@
 'use strict';
 
 import { questions } from '../questionsData.js';
-console.log(questions);
+// console.log(questions);
 
-dataResult = {};
+const dataResult = {};
 
 const test = document.querySelector('.test');
 const iqTest = document.querySelector('.iq-test__list');
