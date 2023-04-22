@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=PT+Serif:wght@400;700&family=Roboto:wght@300;500;900&family=Yeseva+One&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=PT+Serif:wght@400;700&family=Roboto:wght@300;400;500;900&family=Yeseva+One&display=swap"
     rel="stylesheet">
 
 
@@ -26,7 +26,7 @@
         </svg>
       </button>
 
-      <div class="header__subcontainer">
+      <div class="header__subcontainer is-hidden">
         <img src="./images/header-icon.png" alt="Иконка мозг" class="header__icon">
         <p class="header__title">Tест на определение IQ</p>
       </div>
@@ -41,9 +41,9 @@
 
       <nav class="navigation">
         <ul class="navigation__list">
-          <li class="navigation__item"><a href="#hero" class="navigation__link">Главная</a> </li>
-          <li class="navigation__item"><a href="#about" class="navigation__link">Информация о тесте</a></li>
-          <li class="navigation__item"><a href="/" class="navigation__link">Пройти тест</a></li>
+          <li class="navigation__item"><a href="#hero" class="navigation__link" data-main>Главная</a> </li>
+          <li class="navigation__item"><a href="#about" class="navigation__link" data-about>Информация о тесте</a></li>
+          <li class="navigation__item"><a href="#test" class="navigation__link" data-test>Пройти тест</a></li>
         </ul>
       </nav>
     </div>
@@ -99,122 +99,44 @@
         <button class="benefits__button btn-start" type="button">Пройти тест</button>
       </div>
 
-      <div class="features">
-        <p class="features__passage-time">Прохождение теста займет у вас не более <span
-            class="features__passage-time--bold">12 минут</span> , а его результаты вы сможете <span
-            class="features__passage-time--bold">использовать всю жизнь.</span>
-        </p>
-
-        <div class="features__text-container">
-          <p class="features__text">Профессиональная интерпретация и детально <span
-              class="features__text--highlight">проработанные рекомендации</span>
-            позволят вам качественно <span class="features__text--highlight">изменить все аспекты своей жизни:</span>
-            от финансового до любовного.
+      <div class="bg-container">
+        <div class="features">
+          <p class="features__passage-time">Прохождение теста займет у вас не более <span
+              class="features__passage-time--bold">12 минут</span> , а его результаты вы сможете <span
+              class="features__passage-time--bold">использовать всю жизнь.</span>
           </p>
+
+          <div class="features__text-container">
+            <p class="features__text">Профессиональная интерпретация и детально <span
+                class="features__text--highlight">проработанные рекомендации</span>
+              позволят вам качественно <span class="features__text--highlight">изменить все аспекты своей жизни:</span>
+              от финансового до любовного.
+            </p>
+          </div>
+
+          <button class="features__button" type="button">Пройти тест</button>
         </div>
 
-        <button class="features__button" type="button">Пройти тест</button>
+        <p class="copyright-sign">&#169 2019</p>
       </div>
 
     </section>
 
-    <div class="test is-none">
-      <input type="range">
+    <section id="test" class="test is-none">
+      <div class="progress-bar">
+        <div class="progress"></div>
+      </div>
 
-      <ul class="iq-test">
-        <!-- <li>
-          <form>
-            <p>Ваш пол:</p>
-            <label>
-              <input type="radio" name="color" value="red" />
-              Мужчина
-            </label>
-            <label>
-              <input type="radio" name="color" value="white" />
-              Женщина
-            </label>
-          </form>
-        </li>
+      <form class="iq-test">
+        <ul class="iq-test__list"></ul>
 
-        <li>
-          <form>
-            <p>Укажите ваш возраст:</p>
-            <label>
-              <input type="radio" name="color" value="red" />
-              До 18
-            </label>
-            <label>
-              <input type="radio" name="color" value="white" />
-              От 18 до 28
-            </label>
-            <label>
-              <input type="radio" name="color" value="white" />
-              от 29 до 35
-            </label>
-            <label>
-              <input type="radio" name="color" value="white" />
-              От 36
-            </label>
-          </form>
-        </li>
+        <button type="submit" class="test__btn-next" disabled>Далее</button>
+      </form>
 
-        <li>
-          <form>
-            <p>Выберите лишнее:</p>
-            <label>
-              <input type="radio" name="color" value="red" />
-              Дом
-            </label>
-            <label>
-              <input type="radio" name="color" value="white" />
-              Шалаш
-            </label>
-            <label>
-              <input type="radio" name="color" value="white" />
-              Бунгало
-            </label>
-            <label>
-              <input type="radio" name="color" value="white" />
-              Скамейка
-            </label>
-            <label>
-              <input type="radio" name="color" value="white" />
-              Хижина
-            </label>
-          </form>
-        </li>
-
-        <li>Вопрос 3</li>
-
-        <li>Вопрос 3</li>
-
-        <li>Вопрос 3</li>
-
-        <li>Вопрос 3</li>
-
-        <li>Вопрос 3</li>
-
-        <li>Вопрос 3</li>
-
-        <li>Вопрос 3</li>
-
-        <li>Вопрос 3</li> -->
-
-      </ul>
-
-      <button type="button" class="next">Далее</button>
-    </div>
-
+    </section>
 
   </main>
 
-  <footer class="footer">
-    <p>&#169 2019</p>
-  </footer>
-
-
-  <!-- ❗️❗️❗️ Add partials like so for every page -->
-  <!-- <include src="./partials/example.html"></include> -->
 </body>
 
 </html>
