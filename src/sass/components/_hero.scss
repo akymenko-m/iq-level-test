@@ -1,20 +1,63 @@
 .hero {
   padding: 27px 0 11px;
-  background-image: url('../images/hero-bg.jpg');
+  // background-image: url('../images/hero-bg.jpg');
+  // background-repeat: no-repeat;
+  // background-size: 320px;
+  // // background-position: top;
+  // @media (min-device-pixel-ratio: 2),
+  //   (-webkit-min-device-pixel-ratio: 2),
+  //   (min-resolution: 192dpi),
+  //   (min-resolution: 2dppx) {
+  //   // background-image: url('../images/hero-bg@2x.jpg');
+  // }
+
+  // @media screen and (min-width: 768px) {
+
+  background-image: url('../images/bg_brain.png'),
+    radial-gradient(
+      circle,
+      rgba(35, 26, 175, 0.9) 0%,
+      rgba(9, 9, 121, 0.12) 32%
+    ),
+    url('../images/feature-bg.jpg');
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top;
+  background-size: 150px, auto, 320px;
+  background-position: 49% 46%, top;
+  // }
   @media (min-device-pixel-ratio: 2),
     (-webkit-min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
-    background-image: url('../images/hero-bg@2x.jpg');
+    background-image: url('../images/bg_brain.png'),
+      radial-gradient(
+        circle,
+        rgba(35, 26, 175, 0.9) 0%,
+        rgba(9, 9, 121, 0.12) 32%
+      ),
+      url('../images/feature-bg.jpg');
+  }
+
+  @media screen and (min-width: 321px) {
+    background-size: 150px, auto, 400px;
+  }
+
+  @media screen and (min-width: 401px) {
+    background-size: 150px, auto, 500px;
+  }
+
+  @media screen and (min-width: 501px) {
+    padding: 40px 15px;
+    background-size: 200px, auto, 768px;
+  }
+
+  @media screen and (min-width: 768px) {
+    padding: 80px 20px;
+    background-size: auto, auto, 768px;
   }
 }
 
 .hero__pretitle {
   margin-bottom: 14px;
-  //   font-size: 18px;
   line-height: calc(28 / 18);
   text-align: center;
 }
@@ -33,6 +76,14 @@
   color: #ffc700;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   margin-bottom: 150px;
+
+  @media screen and (min-width: 501px) {
+    margin-bottom: 200px;
+  }
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 300px;
+  }
 }
 
 .hero__subtitle {

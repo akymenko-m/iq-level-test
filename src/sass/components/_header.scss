@@ -1,11 +1,13 @@
-// .header {
-//   background-color: blue;
-// }
-
 .header__container {
   height: 46px;
   display: flex;
   gap: 9px;
+
+  @media screen and (min-width: 768px) {
+    height: 60px;
+    margin: 0 auto;
+    max-width: 768px;
+  }
 }
 
 .header__menu-open {
@@ -23,6 +25,16 @@
   &:focus .mob-menu__icon-menu {
     fill: #ffc700;
   }
+
+  @media screen and (min-width: 768px) {
+    width: 30px;
+    height: 22px;
+  }
+}
+
+.mob-menu__icon {
+  width: 30px;
+  height: 22px;
 }
 
 .header__icon {
@@ -63,6 +75,10 @@
   &.is-hidden {
     opacity: 0;
     pointer-events: none;
+  }
+
+  @media screen and (min-width: 450px) {
+    height: 50%;
   }
 }
 

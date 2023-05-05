@@ -8,10 +8,6 @@ body {
   font-weight: 400;
   font-size: 18px;
   letter-spacing: 0.05em;
-
-  // font-family: 'Merriweather', serif;
-  // font-family: 'Roboto', sans-serif;
-  // font-family: 'Yeseva One', cursive;
 }
 
 h1,
@@ -39,7 +35,9 @@ img {
   height: auto;
 }
 
-button {
+button,
+input,
+label {
   cursor: pointer;
 }
 

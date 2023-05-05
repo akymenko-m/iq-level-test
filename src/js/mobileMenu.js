@@ -8,6 +8,7 @@ const refs = {
   mobList: document.querySelector('.navigation__list'),
   main: document.querySelector('.main-content'),
   test: document.querySelector('.test'),
+  result: document.querySelector('.result'),
   header: document.querySelector('.header__subcontainer'),
 };
 
@@ -29,14 +30,14 @@ function removeMenu(event) {
     event.target.hasAttribute('data-main') &&
     refs.main.classList.contains('is-none')
   ) {
-    startTest();
+    moveToMain();
   }
 
   if (
     event.target.hasAttribute('data-about') &&
     refs.main.classList.contains('is-none')
   ) {
-    startTest();
+    moveToMain();
   }
 
   if (event.target.hasAttribute('data-test')) {
@@ -48,7 +49,15 @@ function removeMenu(event) {
 }
 
 function startTest() {
+  refs.main.classList.add('is-none');
+  refs.test.classList.remove('is-none');
+  refs.result.classList.add('is-none');
+  refs.header.classList.toggle('is-hidden');
+}
+
+function moveToMain() {
   refs.main.classList.toggle('is-none');
-  refs.test.classList.toggle('is-none');
+  refs.test.classList.add('is-none');
+  refs.result.classList.add('is-none');
   refs.header.classList.toggle('is-hidden');
 }
